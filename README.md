@@ -6,7 +6,7 @@
 
 In this work, we propose a Tiny  Cycle-Transformer model for multimodal cancer survival analysis based on Cycle-SparseAttention. Compared to similar multimodal work, our work greatly reduces the number of parameters in the fusion part model (the number of our fusion part model's parameters only achieves $\mathbf{10^{4}}$), and achieves the State-of-the-Art effect (Cindex: 0.863 in survival outcome prediction, and ACC: 0.772, AUC: 0.929 in grade classification) in several multimodal cancer survival analysis tasks with histology images, genomic features, and cell graph data of Glioma cancer from TCGA database.
 
-![aab64e9c105c1d256756599445d4420](overall_architecture.png)
+![overall_architecture](overall_architecture.png)
 
 
 
