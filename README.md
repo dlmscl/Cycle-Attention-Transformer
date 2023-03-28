@@ -12,7 +12,7 @@ In this work, we propose a Tiny  Cycle-Transformer model for multimodal cancer s
 
 ## **Dataset:**
 
-We use glioma and clear cell renal cell carcinoma(CCRCC) data from the TCGA. TCGA is a well-known cancer database, which has a lot of genomic information and cell slice image data. The dataset used in our work is the Glioma dataset from the TCGA-GBMLGG and CCRCC dataset from the TCGA-KIRC. The histology images, cell graphs and genomic features used in our work is consistent with those of Richard J. Chen et al. The data can be downloaded from the [following link](https://drive.google.com/drive/u/1/folders/1swiMrz84V3iuzk8x99vGIBd5FCVncOlf) (The checkpoints stored are not the same as ours).
+We use glioma and clear cell renal cell carcinoma (CCRCC) data from the TCGA. TCGA is a well-known cancer database, which has a lot of genomic information and cell slice image data. The dataset used in our work is the Glioma dataset from the TCGA-GBMLGG and CCRCC dataset from the TCGA-KIRC. The histology images, cell graphs and genomic features used in our work is consistent with those of Richard J. Chen et al. The data can be downloaded from the [following link](https://drive.google.com/drive/u/1/folders/1swiMrz84V3iuzk8x99vGIBd5FCVncOlf) (The checkpoints stored are not the same as ours).
 
 
 
@@ -40,7 +40,7 @@ python train_cv.py  --exp_name grad_15 --task grad --mode graph --model_name gra
 
 ### Multimodal Models
 
-The following commands are used to train Cro-Atten(PathOmic) for survival outcome prediction and grade classification, respectively. You can choose Cro-Atten(GraphOmic) by changing the 'mode' and 'model_name' according to your needs. Detailed training parameters are described in the article.
+The following commands are used to train Cro-Atten (PathOmic) for survival outcome prediction and grade classification, respectively. You can choose Cro-Atten(GraphOmic) by changing the 'mode' and 'model_name' according to your needs. Detailed training parameters are described in the article.
 
 ```
 python train_cv.py --exp_name surv_15_rnaseq --task surv --mode pathomic --model_name pathomic_fusion --niter 10 --niter_decay 150 --lr 0.0003 --beta1 0.5 --fusion_type pofusion --mmhid 64 --use_bilinear 1 --use_vgg_features 0 --gpu_ids 0 --omic_gate 0 --use_rnaseq 1 --input_size_omic 320 --batch_size 32 --finetune 1 --myfusion CrossAttention --optimizer_type adam --Tfnum 4 --lastnum 0 --begin_k 1 --lr_policy cosine --reg_type none --input_size_path 224 --data_Augmentation 0 --position_C 1 --position_S 1 --use_conv_stem 1 --use_sparsemax 1 --is_picture 1 --log_root surv_log --log_name log3 --save_best_function 1 --save_pred 1 
