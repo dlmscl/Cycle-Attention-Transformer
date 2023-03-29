@@ -60,7 +60,7 @@ python train_cv.py --exp_name surv_15_rnaseq --task surv --mode pathgraphomic --
 python train_cv.py --exp_name grad_15 --task grad --mode pathgraphomic --model_name pathgraphomic_fusion --niter 10 --niter_decay 190 --lr 0.0003 --batch_size 32 --finetune 1 --beta1 0.5 --fusion_type pofusion_B --mmhid 192 --use_bilinear 1 --gpu_ids 0 --path_gate 0 --act LSM --label_dim 3 --Tfnum 1 --lastnum 0 --optimizer_type adam --reg_type omic --input_size_path 224 --position_C 1 --position_G 1 --position_S 1 --myfusion Cy_Atten --graph_model SAGE --lr_policy cosine --use_sparsemax 1 --begin_k 1 --is_picture 1 --log_root grad_log --log_name log6 --save_best_function 1 --save_pred 1
 ```
 
-### Partial Results
+## Partial Results
 
 
 |      Model      | C-Index (Glioma) | AUC (Glioma) | AP (Glioma) | F1-micro (Glioma) | F1-GradeIV (Glioma) | C-Index (CCRCC) |
