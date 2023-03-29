@@ -61,33 +61,14 @@ python train_cv.py --exp_name grad_15 --task grad --mode pathgraphomic --model_n
 ```
 
 ### Partial Results
-For survival outcome prediction:
-
-|         Model         | C-Index (Glioma) | C-Index (CCRCC) | Overall |
-| :-------------------: | :--------------: | :-------------: | :-----: |
-|    Cro-Atten (PO)     |      0.856       |      0.745      |  0.801  |
-|    Cro-Atten (GO)     |      0.845       |      0.743      |  0.797  |
-|  Tri-Co-Atten (PGO)   |      0.838       |      0.757      |  0.797  |
-|      MulT (PGO)       |      0.857       |      0.740      |  0.799  |
-| Cy-Atten (PGO) (Ours) |      0.863       |      0.765      |  0.814  |
-
-For grade classification:
-
-|         Model         | AUC (Glioma) | AP (Glioma) | F1-micro (Glioma) | F1-GradeIV (Glioma) |
-| :-------------------: | :----------: | :---------: | :---------------: | :-----------------: |
-|    Cro-Atten (PO)     |    0.923     |    0.860    |       0.771       |        0.940        |
-|    Cro-Atten (GO)     |    0.913     |    0.845    |       0.717       |        0.926        |
-|  Tri-Co-Atten (PGO)   |    0.918     |    0.856    |       0.751       |        0.923        |
-|      MulT (PGO)       |    0.923     |    0.863    |       0.756       |        0.930        |
-| Cy-Atten (PGO) (Ours) |    0.929     |    0.873    |       0.772       |        0.941        |
 
 
-|         Model         | C-Index (Glioma) | C-Index (CCRCC) | AUC (Glioma) | AP (Glioma) | F1-micro (Glioma) | F1-GradeIV (Glioma) |
-| :-------------------: | :--------------: | :-------------: | :----------: | ----------- | :---------------: | :-----------------: |
-|    Cro-Atten (PO)     |      0.856       |      0.745      |    0.923     | 0.860       |       0.771       |        0.940        |
-|    Cro-Atten (GO)     |      0.845       |      0.743      |    0.913     | 0.845       |       0.717       |        0.926        |
-|  Tri-Co-Atten (PGO)   |      0.838       |      0.757      |    0.918     | 0.856       |       0.751       |        0.923        |
-|      MulT (PGO)       |      0.857       |      0.740      |    0.923     | 0.863       |       0.756       |        0.930        |
-| Cy-Atten (PGO) (Ours) |      0.863       |      0.765      |    0.929     | 0.873       |       0.772       |        0.941        |
+|       Model        | C-Index (Glioma) | AUC (Glioma) | AP (Glioma) | F1-micro (Glioma) | F1-GradeIV (Glioma) | C-Index (CCRCC) |
+| :----------------: | :--------------: | :----------: | :---------: | :---------------: | :-----------------: | :-------------: |
+|   Cro-Atten (PO)   |      0.856       |    0.923     |    0.860    |       0.771       |        0.940        |      0.745      |
+|   Cro-Atten (GO)   |      0.845       |    0.913     |    0.845    |       0.717       |        0.926        |      0.743      |
+| Tri-Co-Atten (PGO) |      0.838       |    0.918     |    0.856    |       0.751       |        0.923        |      0.757      |
+|     MulT (PGO)     |      0.857       |    0.923     |    0.863    |       0.756       |        0.930        |      0.740      |
+|   Cy-Atten (PGO)   |      0.863       |    0.929     |    0.873    |       0.772       |        0.941        |      0.765      |
 
 
