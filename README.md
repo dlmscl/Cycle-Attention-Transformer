@@ -43,7 +43,7 @@ python train_cv.py  --exp_name grad_15 --task grad --mode graph --model_name gra
 The following commands are used to train Cro-Atten (PathOmic) for survival outcome prediction and grade classification, respectively. You can choose Cro-Atten(GraphOmic) by changing the 'mode' and 'model_name' according to your needs. Detailed training parameters are described in the article.
 
 ```
-python train_cv.py --exp_name surv_15_rnaseq --task surv --mode pathomic --model_name pathomic_fusion --niter 10 --niter_decay 150 --lr 0.0003 --beta1 0.5 --fusion_type pofusion --mmhid 64 --use_bilinear 1 --use_vgg_features 0 --gpu_ids 0 --omic_gate 0 --use_rnaseq 1 --input_size_omic 320 --batch_size 32 --finetune 1 --myfusion CrossAttention --optimizer_type adam --Tfnum 4 --lastnum 0 --begin_k 1 --lr_policy cosine --reg_type none --input_size_path 224 --data_Augmentation 0 --position_C 1 --position_S 1 --use_conv_stem 1 --use_sparsemax 1
+python train_cv.py --exp_name surv_15_rnaseq --task surv --mode pathomic --model_name pathomic_fusion --niter 10 --niter_decay 150 --lr 0.0003 --beta1 0.5 --fusion_type pofusion --mmhid 64 --use_bilinear 1 --use_vgg_features 0 --gpu_ids 0 --omic_gate 0 --use_rnaseq 1 --input_size_omic 320 --batch_size 32 --finetune 1 --myfusion CrossAttention --optimizer_type adam --Tfnum 4 --lastnum 0 --begin_k 1 --lr_policy cosine --reg_type none --input_size_path 224 --position_C 1 --position_S 1 --use_conv_stem 1 --use_sparsemax 1
 ```
 
 ```
@@ -53,7 +53,7 @@ python train_cv.py --exp_name grad_15 --task grad --mode pathomic --model_name p
 The parameters in the following commands are used to train Cy-Atten (PathGraphOmic) for survival outcome prediction and grade classification, respectively. You can choose Tri-Co-Atten or MulT by changing the 'mode' and 'model_name' according to your needs. Detailed training parameters are described in the article.
 
 ```
-python train_cv.py --exp_name surv_15_rnaseq --task surv --mode pathgraphomic --model_name pathgraphomic_fusion --niter 10 --niter_decay 190 --batch_size 32 --finetune 1 --lr 0.0003 --beta1 0.5 --lr_policy cosine --fusion_type pofusion_A --mmhid 192 --use_bilinear 1 --Tfnum 1 --lastnum 0 --gpu_ids 0 --optimizer_type adam --reg_type omic --omic_gate 0 --grph_scale 2 --input_size_path 224 --use_rnaseq 1 --use_sparsemax 1 --input_size_omic 320 --myfusion Cy_Atten --graph_model SAGE --begin_k 1 --topology 0 --position_C 1 --position_G 1 --position_S 1
+python train_cv.py --exp_name surv_15_rnaseq --task surv --mode pathgraphomic --model_name pathgraphomic_fusion --niter 10 --niter_decay 190 --batch_size 32 --finetune 1 --lr 0.0003 --beta1 0.5 --lr_policy cosine --fusion_type pofusion_A --mmhid 192 --use_bilinear 1 --Tfnum 1 --lastnum 0 --gpu_ids 0 --optimizer_type adam --reg_type omic --omic_gate 0 --grph_scale 2 --input_size_path 224 --use_rnaseq 1 --use_sparsemax 1 --input_size_omic 320 --myfusion Cy_Atten --graph_model SAGE --begin_k 1 --position_C 1 --position_G 1 --position_S 1
 ```
 
 ```
