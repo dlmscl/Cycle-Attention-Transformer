@@ -61,31 +61,24 @@ python train_cv.py --exp_name grad_15 --task grad --mode pathgraphomic --model_n
 ```
 
 ### Partial Results
-\begin{table*}[!t]
-  \centering
-  \caption{the experimental results and the amount of fusion parameters for survival outcome prediction}
-    \setlength\tabcolsep{0.55em}{
-    \begin{tabular}{c|ccc|c}
-    \toprule
-    Model & C-Index (Glioma)    & C-Index (CCRCC)  & Overall & \makecell{Fusion Para\_num \\ for Surv}  \\
-    \hline
-    EfficientNet (Path Only) & 0.727 ± 0.016 & 0.626 ± 0.013 & 0.677 & None \\
-    SNN (Omic Only)   & 0.819 ± 0.038 & 0.738 ± 0.029 & 0.780 & None \\
-    SAGE (Graph Only)  & 0.732 ± 0.023 & 0.658 ± 0.024 & 0.695 & None \\
-    Kronecker Product (PO) \cite{03chen}& 0.820 ± 0.009  & 0.719 ± 0.031 & 0.770 & 170130 \\
-    Kronecker Product (GO) \cite{03chen}& 0.812 ± 0.010  & 0.686 ± 0.024 & 0.749 & 92305 \\
-    Kronecker Product (PGO) \cite{03chen}& 0.826 ± 0.009  & 0.720 ± 0.028 & 0.773 &1276145 \\
-    Cro-Atten (PO) \cite{lu2019vilbert} & 0.856 ± 0.026 & 0.745 ± 0.027 & 0.801 &6837 \\
-    Cro-Atten (GO) \cite{lu2019vilbert}& 0.845 ± 0.033 & 0.743 ± 0.023 & 0.797 & 6837 \\
-    Tri-Co-Atten (PGO) \cite{rahman2021tribert} & 0.838 ± 0.026  & 0.757 ± 0.027 & 0.797 & 10177 \\
-    MulT (PGO) \cite{tsai2019multimodal}& 0.857 ± 0.029  & 0.740 ± 0.026 & 0.799 & 48865 \\
-    \textbf{Cy-Atten (PGO) ours}& \textbf{0.863 ± 0.026}  & \textbf{0.765 ± 0.026} & \textbf{0.814} & 5311 \\
-    \bottomrule
-    \end{tabular}}
-    \begin{minipage}{\linewidth}\vspace{0.8ex}
-    *C-Index of all strategies in glioma and CCRCC survival prediction. Cy-Atten is the fusion strategy based on Transformer mentioned in this paper. Kronecker Product is the other strategy proposed by Richard J. Chen et al\cite{03chen} and we refer to the results presented in their paper for comparison.
-    \end{minipage}
-  \label{tab:surv results}
-\end{table*}
+For survival outcome prediction:
+
+|         Model         | C-Index (Glioma) | C-Index (CCRCC) | Overall |
+| :-------------------: | :--------------: | :-------------: | :-----: |
+|    Cro-Atten (PO)     |      0.856       |      0.745      |  0.801  |
+|    Cro-Atten (GO)     |      0.845       |      0.743      |  0.797  |
+|  Tri-Co-Atten (PGO)   |      0.838       |      0.757      |  0.797  |
+|      MulT (PGO)       |      0.857       |      0.740      |  0.799  |
+| Cy-Atten (PGO) (Ours) |      0.863       |      0.765      |  0.814  |
+
+For grade classification:
+
+|         Model         | AUC (Glioma) | AP (Glioma) | F1-micro (Glioma) | F1-GradeIV (Glioma) |
+| :-------------------: | :----------: | :---------: | :---------------: | :-----------------: |
+|    Cro-Atten (PO)     |    0.923     |    0.860    |       0.771       |        0.940        |
+|    Cro-Atten (GO)     |    0.913     |    0.845    |       0.717       |        0.926        |
+|  Tri-Co-Atten (PGO)   |    0.918     |    0.856    |       0.751       |        0.923        |
+|      MulT (PGO)       |    0.923     |    0.863    |       0.756       |        0.930        |
+| Cy-Atten (PGO) (Ours) |    0.929     |    0.873    |       0.772       |        0.941        |
 
 
