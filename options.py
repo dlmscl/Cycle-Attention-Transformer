@@ -9,7 +9,7 @@ import torch
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataroot', default='./data/TCGA_GBMLGG', help="datasets")
-    parser.add_argument('--newgraphroot', default='./data/TCGA_GBMLGG/newgraph', help="new cell graphs")
+    parser.add_argument('--newgraphroot', default='./data/TCGA_GBMLGG/graph_GBMLGG', help="new cell graphs")
     parser.add_argument('--picture_save', type=str, default='./lsc-ch/picture', help='pictures are saved here')
     parser.add_argument('--begin_k', type=int, default=1, help='which split to begin')
     parser.add_argument('--data_Augmentation', type=int, default=0)
