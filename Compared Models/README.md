@@ -16,7 +16,7 @@ $$
 where $T_f\left( \cdot \right)$ stands for the processing of cross-attention Transformer blocks and $\mathrm{SparseAttention}$ represents the operation of sparse attention introduced above.
 And in the third module, we concatenate the final paired features and the output is the result of bimodal fusion. So we can put the result into the corresponding fully connected layer for Cox regression. 
 
-<img src="FIgure4.png" alt="FIgure4" style="zoom:15%;" />
+<img src="FIgure4.png" width="50%" height="50%">
 
 <p style="text-align: left;">
     <strong>Fig.9:</strong> The network architecture of Cross-Attention: The Cross-Attention Transformer    module is a dual-stream Transformer, this module has two parallel Transformer encoder and the Query matrices between two modalities are exchanged in a cross-stream manner. It puts a pair of features to Cross-Attention Transformer layers, and then generates a pair of final output features that contain mutual information.
