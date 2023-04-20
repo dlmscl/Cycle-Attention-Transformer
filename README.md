@@ -12,7 +12,7 @@ In this work, we present a Cycle-Attention Transformer (Cy-Atten) framework that
 
 ## **Dataset:**
 
-We use glioma and clear cell renal cell carcinoma (CCRCC) data from the TCGA. TCGA is a well-known cancer database, which has a lot of genomic information and cell slice image data. The dataset used in our work is the Glioma dataset from the TCGA-GBMLGG and CCRCC dataset from the TCGA-KIRC. The histology images, cell graphs and genomic features used in our work is consistent with those of Richard J. Chen et al. The data can be downloaded from the [following link](https://drive.google.com/drive/u/1/folders/1swiMrz84V3iuzk8x99vGIBd5FCVncOlf). Checkpoints and corrected graph data can be downloader from [here](https://drive.google.com/drive/folders/1jBNjmARYAxgraCctt5qZAVmdH-vuVF5H). Because the cell graphs of Pathomic Fusion could not be used directly due to version incompatibility of some packages, we stored the processed ones in folders named 'graph_GBMLGG' and 'graph_KIRC'. You need place the compressed file named 'graph_GBMLGG' ('graph_KIRC') in the second link inside the 'data/TCGA_GBMLGG' ('data/TCGA_KIRC') of the first link and unzip it.
+We use glioma and clear cell renal cell carcinoma (CCRCC) data from the TCGA. TCGA is a well-known cancer database, which has a lot of genomic information and cell slice image data. The datasets used in our work are the Glioma dataset from the TCGA-GBMLGG and CCRCC dataset from the TCGA-KIRC. The histology images, cell graphs and genomic features used in our work are consistent with those of Pathomic Fusion [^1]. The data can be downloaded from the [following link](https://drive.google.com/drive/u/1/folders/1swiMrz84V3iuzk8x99vGIBd5FCVncOlf). Checkpoints and corrected graph data can be downloaded from [here](https://drive.google.com/drive/folders/1jBNjmARYAxgraCctt5qZAVmdH-vuVF5H). Because the cell graphs of Pathomic Fusion could not be used directly due to version incompatibility of some packages, we stored the processed ones in folders named 'graph_GBMLGG' and 'graph_KIRC'. You need to place the compressed file named 'graph_GBMLGG' ('graph_KIRC') in the second link inside the 'data/TCGA_GBMLGG' ('data/TCGA_KIRC') of the first link and unzip it.
 
 
 
@@ -70,5 +70,8 @@ python train_cv.py --exp_name grad_15 --task grad --mode pathgraphomic --model_n
 |  Tri-Co-Atten   |      0.838       |    0.918     |    0.856    |       0.751       |        0.923        |      0.757      |
 |      MulT       |      0.857       |    0.923     |    0.863    |       0.756       |        0.930        |      0.740      |
 | Cy-Atten (Ours) |      0.863       |    0.929     |    0.873    |       0.772       |        0.941        |      0.765      |
+
+
+[^1]: Chen, R. J., Lu, M. Y., Wang, J., Williamson, D. F., Rodig, S. J., Lindeman, N. I., & Mahmood, F. (2020). Pathomic fusion: an integrated framework for fusing histopathology and genomic features for cancer diagnosis and prognosis. *IEEE Transactions on Medical Imaging*, *41*(4), 757-770.
 
 
