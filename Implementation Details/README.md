@@ -20,9 +20,7 @@ TABLE I:  Volume of data in different modalities
 | PathGraphOmic |      999      |      1325      |     1247     |
 
 
-
-![avatar](grade_amount.jpg)
-
+<img src="grade_amount.jpg" width="20%" height="20%">
 ​                                                                      Fig. 1: Histogram of category distribution in glioma.
 
 
