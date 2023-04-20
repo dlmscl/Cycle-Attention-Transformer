@@ -40,11 +40,13 @@ Fig. 2: Data processing of histologic images. On the left, the histologic image 
 ## Loss Function
 
    We use different loss functions on different tasks. For survival outcome prediction, we use the Cox partial likelihood loss as the loss function, which is computed as follows:
+  
 $$
 \begin{equation}
     L(\beta) = \prod_{i} \frac{\exp(\beta X^{(i)})}{\sum\limits_{j} \exp(\beta X^{(j)}) \cdot 1_{T_j > T_i}},
 \end{equation}
 $$
+
 where $\beta$ is the parameter (vector form) in the Cox-model. The Cox-model here consists of two parts: baseline hazard function $h_0(t)$ and $\exp(\beta X)$, where $X$ is a vector of covariates $X^{(i)}$.
 
 ​     For grade classification, we use the cross entropy loss in the training process, which is computed as follows:
