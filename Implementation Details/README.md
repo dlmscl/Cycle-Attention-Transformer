@@ -29,7 +29,7 @@ TABLE I:  Volume of data in different modalities
 
 ​    For TCGA-GBMLGG, when using EfficientNet to learn the representation of histologic images, due to the small number of histologic images, there are only 1505 $1024 \times 1024$ images without ignoring patients whose molecular subtypes and histological subtypes were missing, which maks it impossible to fully train deep CNN networks. Moreover, the histologic images are fine-grained, so we can segment them and then train our model better. Considering that the image size on ImageNet is $224 \times 224$ , we use a stride of 160 (stride = 160) to cut each original $1024 \times 1024$  image into $25 \ 224 \times 224$ subimages (shown in Fig. 2). For multimodal fusion, because it requires too much time to train the multimodal model with full 25x sub-images, we only randomly cut $224 \times 224$ subimages from the original $1024 \times 1024$ histologic image. For TCGA-KIRC, the histologic images are only $512 \times 512$, which is much smaller than the images in TCGA-GBMLGG. We only randomly cut $224 \times 224$ subimages for EfficientNet and the multimodal model. In addition, for both TCGA-GBMLGG and TCGA-KIRC, color jittering and random flips were also performed as data augmentation for both unimodal networks and multimodal fusion. 
 
-![tear_tissue_apart](tear_tissue_apart.png)
+<img src="tear_tissue_apart.png" width="80%" height="80%">
 
 Fig. 2: Data processing of histologic images. On the left, the histologic image of $1024 \times 1024$ is transformed into 25 $224 \times 224$  subgraphs. On the right, a block of $224 \times 224$ subgraphs is randomly taken from the histology image of $1024 \times 1024$.
 
