@@ -67,7 +67,7 @@ $$
 \end{equation}
 $$
 
-where $\mathrm{Loss}\_{\mathrm{Cox}}$ and $\mathrm{Loss}\_{\mathrm{nll}}$ are Cox partial likelihood loss and negative log-likelihood loss, respectively, which are mentioned above. $\mathrm{Loss}_{\mathrm{L1}}$ is derived from the L1-norm to make the parameters sparse. $\lambda_{\mathrm{Cox}}$, $\lambda_{\mathrm{nll}}$ and $\lambda_{\mathrm{L1}}$ are the coefficients corresponding to each loss. ${\mathrm{1}_\mathrm{surv}}=1$ when the task is survival outcome prediction. ${\mathrm{1}_\mathrm{grad}}=1$ has a similar meaning.
+where $\mathrm{Loss}\_{\mathrm{Cox}}$ and $\mathrm{Loss}\_{\mathrm{nll}}$ are Cox partial likelihood loss and negative log-likelihood loss, respectively, which are mentioned above. $\mathrm{Loss}\_{\mathrm{L1}}$ is derived from the L1-norm to make the parameters sparse. $\lambda\_{\mathrm{Cox}}$, $\lambda_{\mathrm{nll}}$ and $\lambda\_{\mathrm{L1}}$ are the coefficients corresponding to each loss. ${\mathrm{1}\_\mathrm{surv}}=1$ when the task is survival outcome prediction. ${\mathrm{1}\_\mathrm{grad}}=1$ has a similar meaning.
 
 
 
