@@ -56,14 +56,17 @@ $$
     \mathrm{CossEntropy} = - \sum_{i} l_{i} \ln p_{i}
 \end{equation}
 $$
-where $ l_i $ is the label and $ p_{i} $ is the logit.
+
+where $l_i$ is the label and $p_{i}$ is the logit.
 
 ​     Therefore, loss for both survival outcome prediction and grade classification can be computed with the following formula:
+
 $$
 \begin{equation}
     \mathrm{Loss} = \lambda_{\mathrm{Cox}}\mathrm{Loss}_{\mathrm{Cox}}{\mathrm{1}_\mathrm{surv}} + \lambda_{\mathrm{nll}}\mathrm{Loss}_{\mathrm{nll}}{\mathrm{1}_\mathrm{grad}} + \lambda_{\mathrm{L1}}\mathrm{Loss}_{\mathrm{L1}}
 \end{equation}
 $$
+
 where $\mathrm{Loss}_{\mathrm{Cox}}$ and $\mathrm{Loss}_{\mathrm{nll}}$ are Cox partial likelihood loss and negative log-likelihood loss, respectively, which are mentioned above. $\mathrm{Loss}_{\mathrm{L1}}$ is derived from the L1-norm to make the parameters sparse. $\lambda_{\mathrm{Cox}}$, $\lambda_{\mathrm{nll}}$ and $\lambda_{\mathrm{L1}}$ are the coefficients corresponding to each loss. ${\mathrm{1}_\mathrm{surv}}=1$ when the task is survival outcome prediction. ${\mathrm{1}_\mathrm{grad}}=1$ has a similar meaning.
 
 
