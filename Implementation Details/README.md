@@ -21,7 +21,7 @@ TABLE I:  Volume of data in different modalities
 
 
 
-<img src="grade_amount.jpg" alt="grade_amount" style="zoom: 10%;" />
+<img src="grade_amount.jpg" alt="grade_amount" style="zoom: 5%;" />
 
 ​                                                                      Fig. 1: Histogram of category distribution in glioma.
 
