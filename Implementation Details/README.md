@@ -98,7 +98,7 @@ TABLE II:  Training hyperparameters and details for survival outcome prediction 
 
 
 
-TABLE III: Training hyperparameters and details for grade classification on glioma. To accelerate the convergence speed, Adam was used in all model training. The maximum number of iterations (T max) for all networks trained with the cosine annealing schedule is 10.
+TABLE III: Training hyperparameters and details for grade classification on glioma. To accelerate the convergence speed, Adam was used in all model training. The maximum number of iterations (T_max) for all networks trained with the cosine annealing schedule is 10.
 
 |          Model           | Optimizer |           Fusion            | LR     | BS   | Decay of LR | Tfnum | Epoch |
 | :----------------------: | :-------: | :-------------------------: | ------ | ---- | ----------- | ----- | ----- |
