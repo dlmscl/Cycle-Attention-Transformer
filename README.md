@@ -16,7 +16,7 @@ We use glioma and clear cell renal cell carcinoma (CCRCC) data from the TCGA. TC
 
 
 
-## Enviroment Setup
+## Environment Setup
 
 Our models are trained with NVIDIA GPUs (NVIDIA RTX A2000, NVIDIA RTX A4000, NVIDIA A30 and NVIDIA A40), torch = 1.8.1 and torch_geometric = 2.0.4.  Richard J. Chen's cell graphs are stored with torch_geometric = 1.3.0, so there may be incompatibility issues when reading.
 
