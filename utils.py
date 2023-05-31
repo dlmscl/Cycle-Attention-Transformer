@@ -345,24 +345,15 @@ def unfreeze_unimodal(opt, model, epoch, file):
             dfs_unfreeze(model.module.grph_net)
             print("Unfreezing Graph")
     elif opt.mode == "pathgraphomic":
-        if epoch == 5:
+        if epoch == 10:
             dfs_unfreeze(model.module.omic_net)
             print("Unfreezing Omic")
-        if epoch == 5:
+        if epoch == 10:
             dfs_unfreeze(model.module.grph_net)
             print("Unfreezing Graph")
-        if epoch == 5 and opt.use_vgg_features == 0:
+        if epoch == 10 and opt.use_vgg_features == 0:
             dfs_unfreeze(model.module.path_net)
             print("Unfreezing Path")
-            
-    elif opt.mode == "omicomic":
-        if epoch == 5:
-            dfs_unfreeze(model.module.omic_net)
-            print("Unfreezing Omic")
-    elif opt.mode == "graphgraph":
-        if epoch == 5:
-            dfs_unfreeze(model.module.grph_net)
-            print("Unfreezing Graph")
 
 
 def dfs_freeze(model):
