@@ -531,7 +531,7 @@ class PathomicNet(nn.Module):
                 self.path_net = nn.DataParallel(self.path_net)
                 
                 best_path_ckpt = torch.load(os.path.join(opt.checkpoints_dir, opt.exp_name, 'path_effnet', 'path'+pt_fname), map_location=torch.device('cpu'))
-                self.path_net.load_state_dict(best_omic_ckpt['model_state_dict'])
+                self.path_net.load_state_dict(best_path_ckpt['model_state_dict'])
                 print("Loading Models:\n", os.path.join(opt.checkpoints_dir, opt.exp_name, 'path_effnet', 'path'+pt_fname))
                 dfs_freeze(self.path_net)
             
