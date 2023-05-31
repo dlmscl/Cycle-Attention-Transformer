@@ -7,6 +7,7 @@ from PIL import Image
 from sklearn import preprocessing
 
 import torch
+import torchvision
 import torch.nn as nn
 from torch.utils.data.dataset import Dataset  # For custom datasets
 from torchvision import datasets, transforms
