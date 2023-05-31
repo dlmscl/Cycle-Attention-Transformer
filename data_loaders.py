@@ -108,6 +108,8 @@ class PathgraphomicFastDatasetLoader(Dataset):
         self.t = data[split]['t']
         self.g = data[split]['g']
         self.mode = mode
+        self.data_name = opt.dataroot
+        self.newgraphroot = opt.newgraphroot
 
     def __getitem__(self, index):
         single_e = torch.tensor(self.e[index]).type(torch.FloatTensor)
