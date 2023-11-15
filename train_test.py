@@ -33,6 +33,9 @@ def train(opt, data, device, k, file, time):
     cos_loss = CosineSimilarityLoss()
 
     print("Number of Trainable Parameters: %d" % count_parameters(model), file=file)
+    if opt.mode == 'pathomic' or opt.mode == 'graphomic' or opt.mode == 'pathgraphomic':
+        total = sum([param.nelement() for param in model.module.fusion.parameters()])
+        print("Number of fusion Parameters: %d" % total, file=file)
     print("Activation Type:", opt.act_type, file=file)
     print("Optimizer Type:", opt.optimizer_type, file=file)
     print("Regularization Type:", opt.reg_type, file=file)
